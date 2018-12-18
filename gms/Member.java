@@ -1,4 +1,4 @@
-package real;
+package gms;
 
 public class Member {
 	String name; //¸â¹ö º¯¼ö

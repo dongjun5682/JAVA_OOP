@@ -1,22 +1,21 @@
-package real;
-
-import java.util.Scanner;
-
+package gms;
 import javax.swing.JOptionPane;
 
 public class Main {
 	public static void main(String[] args) {
+		JOptionPane opt = new JOptionPane();
 		while (true) {
-			JOptionPane opt = new JOptionPane();
+	
 			Member m = new Member();
 			Calc c = new Calc();
-			String menu = JOptionPane.showInputDialog("0.종료 \n 1.회원관리 \n 2.계산기 \n 3.로또 \n 4.달력 ");
+			Lotto l = new Lotto();
+			MyCalendar y = new MyCalendar();
+			String menu = JOptionPane.showInputDialog("0.종료\n1.회원관리\n2.계산기\n3.로또\n4.달력 ");
 			switch (menu) {
 			case "0":
 				JOptionPane.showMessageDialog(null, "시스템 종료");
 				return;
 			case "1":
-			
 				String name = JOptionPane.showInputDialog("이름 입력");
 				m.name = name;
 				JOptionPane.showMessageDialog(null, String.format("환영합니다. %s님", m.name));
@@ -36,7 +35,7 @@ public class Main {
 					break;
 				}
 			case "2"://계산기
-				String cMenu = opt.showInputDialog(null,"1.계산기\n 2.구구단");
+				String cMenu = opt.showInputDialog(null,"1.계산기\n2.구구단");
 				switch (cMenu) {
 				case "1":	
 					//계산기
@@ -58,22 +57,20 @@ public class Main {
 					case "%":
 						opt.showMessageDialog(null,String.format("결과: %s",c.percent(calc)));
 						break;
+					}
 				case "2":
 					//구구단
-					String[] gugu = opt.showInputDialog(null, "구구단입니다.숫자 두개 입력해주세요. ").split("");
+					String gugu =opt.showInputDialog(null, "구구단입니다.단수를 입력해주세요.");
 					opt.showMessageDialog(null, String.format("%s", c.gugudan(gugu)));
 					break;
-
-				default:
-					break;
 				}
-				
-				}
-				
 				break;
 			case "3"://로또
+				opt.showMessageDialog(null, String.format("%s",l.randomNum() ));
 				break;
 			case "4"://달력
+				String year =opt.showInputDialog(null,"년도를 입력해주세요.");
+				opt.showMessageDialog(null, String.format("%s", y.leapYear(year)));
 				break;
 			default:
 				break;

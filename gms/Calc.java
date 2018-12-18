@@ -1,5 +1,4 @@
-package real;
-
+package gms;
 public class Calc {
 	public String plus(String[] calc){
 		String res = "";
@@ -41,10 +40,15 @@ public class Calc {
 		res =a+op+b+"="+(a%b);
 		return res;
 	}
-	public String gugudan(String[] dan){
+	public String gugudan(String dan){
 		String res = "";
-		for (int i = 0; i < dan.length; i++) {
-
+		int a = Integer.parseInt(dan);
+		
+		if(a < 0 || a > 10) {
+			 res = "2단에서 9단 밖에없습니다.";
+		}
+		for (int i = 1; i < 10; i++) {
+			res += dan+"*"+i+"="+(a*i)+"\n";
 		}
 		return res;
 	}
