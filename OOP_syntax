@@ -38,3 +38,17 @@ creating-
  멤버 변수는 초기화 X
  로컬변수는 초기화 필수 하지않으면 원하지않은 값이 들어가기떄문에
  
+ 메소드 선언구조
+ public String test(String a){}
+ public -> 접근제한
+ String ->리턴타입
+ test ->ID
+ (String a) ->파라미터
+ {} -> 에어리어
+ 
+// 리턴타입
+결과가 없으면 void
+결과가 있으면 String,int....,member
+
+리턴이 없는 경우와 있는 경우
+리턴타입이 void 인 경우와 아닌 경우
