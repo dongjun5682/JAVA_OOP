@@ -1,19 +1,30 @@
-package bank1;
+package bank11;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
 public class Account {
-	final static String BANK_NAME = "우리은행";
-	String accountNum,today;
-	int money;
+	public final static String BANK_NAME = "WooriBank";
+	private String accountNum , today;
+	private int money;
 	Account(int money){
 		this.accountNum = this.generatorAccountNum();
 		this.today = this.today();
 		this.money = money;
 	}
-
+	public String getAccountNum(){
+		return accountNum;
+	}
+	public String getToday( ){
+		return today;
+	}
+	public void setMoney(int money){
+		this.money = money;
+	}
+	public int getMoney(){
+		return money;
+	}
 	public String today(){
 		String today = "";
 		Date date = new Date();
@@ -46,14 +57,14 @@ public class Account {
 		return String.format("%d원 출금되었습니다.\n"
 				+ "잔액 : %d원 ",withdrawals,money);
 	}
-	public String info(String name){
+	public String toString(){
 		String info = "";
 		return String.format("[계좌정보]\n"
 				+ "은행명: %s\n"
 				+ "계좌번호: %s\n"
 				+ "이름: %s\n"
 				+ "개설날짜: %s\n"
-				+ "잔액: %s ",BANK_NAME,accountNum,name,today,money);
+				+ "잔액: %s ",BANK_NAME,accountNum,today,money);
 	}
 
 }
