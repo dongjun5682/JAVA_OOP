@@ -54,23 +54,25 @@ creating-
 리턴타입이 void 인 경우와 아닌 경우
 
 
-
+import javax.swing.JOptionPane;
 public class Main {
 	public static void main(String[] args) {
 		while (true) {
 			switch (JOptionPane.showInputDialog("[메뉴]\n"
 					+ "0.종료\n"
-					+ "1.회원가입\n"
-					+ "2.회원정보\n"
-					+ "3.계좌개설\n"
-					+ "4.계좌정보\n"
-					+ "5.입금\n"
-					+ "6.출금\n"
-					+ "7.비밀번호변경")) {
+					+ "1.일반폰 \n"
+					+ "2.\n"
+					+ "3.\n"
+					+ "4.\n"
+					+ "5.\n"
+					+ "")) {
 					case "0":
 						JOptionPane.showMessageDialog(null,"종료되었습니다.");
 						return;
-
+					case "1":
+						break;
+					case "2":
+						break;
 			}
 		}
 	}

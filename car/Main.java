@@ -1,11 +1,6 @@
 package car;
 
 import javax.swing.JOptionPane;
-
-import bank21.AccountBean;
-import bank21.AccountService;
-import bank21.MemberBean;
-
 public class Main {
 	public static void main(String[] args) {
 		while (true) {
