@@ -1,5 +1,8 @@
 package card;
 
-public class CardService {
+public interface CardService {
 
+	public void add(String kind , String number);
+	public void show();
+	
 }

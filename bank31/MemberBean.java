@@ -27,7 +27,7 @@ public class MemberBean {
 	public String getPass(){
 		return pass;
 	}
-	
+	@Override
 	public String toString(){
 		return String.format("[회원정보]\n"
 				+ "이름: %s\n"

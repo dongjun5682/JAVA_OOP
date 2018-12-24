@@ -1,8 +1,8 @@
 package car;
 
 public class CarBean {
-	private String color, gearType;
-	private int door; 
+	private String brand,color, gearType;
+	private int door; //문의 갯수
 	
 	public void setColor(String color){
 		this.color = color;
@@ -21,10 +21,19 @@ public class CarBean {
 	}
 	public int getDoor(){
 		return door;
+	}	
+	public void setBrand(String brand){
+		this.brand = brand;
+	}
+	public String getBrand(){
+		return brand;
 	}
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+		return String.format("[차량정보]\n"
+				+ "제조사 : %s\n"
+				+ "색깔: %s\n"
+				+ "기어 : %s\n"
+				+ "문의 갯수: %s",brand,color,gearType,door);
 	}
 }
